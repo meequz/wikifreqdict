@@ -13,7 +13,10 @@ true_chars = 'ёйцукенгшўзх\'фывапролджэячсмітьбю
 input_file_1 = 'text'
 input_file = input_file_1
 output_file = 'only_words'
-os.remove(output_file)
+try:
+	os.remove(output_file)
+except:
+	None
 
 title_flag = 0
 for idx, line in enumerate(open(input_file)):
@@ -53,7 +56,10 @@ print('Words has been extracted. Generating freq dict...')
 input_file_2 = 'only_words'
 input_file = input_file_2
 output_file = 'freq_dict'
-os.remove(output_file)
+try:
+	os.remove(output_file)
+except:
+	None
 c = collections.Counter()
 
 for line in open(input_file):			#~ fill the counter
